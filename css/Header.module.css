@@ -1,0 +1,116 @@
+.header {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  height: 50vh;
+  background-image: url("../../Asset/headerMobile.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.header h1 {
+  font-size: 1.2rem;
+  color: #f5f5f5;
+  z-index: 2;
+}
+.header h1 i {
+  color: #F29C6B;
+}
+.header .searchWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+.header .searchWrapper .input, .header .searchWrapper .searchBtn {
+  padding: 0.5em;
+  border: none;
+  z-index: 2;
+  text-align: left;
+}
+.header .searchWrapper .input {
+  margin-left: 5%;
+  width: 55%;
+  background-color: #f5f5f5;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  color: #101010;
+}
+.header .searchWrapper .searchBtn {
+  margin-right: 5%;
+  width: 35%;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background-color: #F29C6B;
+  color: #f5f5f5;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+}
+.header .searchWrapper .searchBtn:hover {
+  background-color: #F26849;
+}
+.header .darkness {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+@media (min-width: 576px) {
+  .header {
+    background-image: url("../../Asset/headerDesktop.jpg");
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .header h1 {
+    font-size: 1.6rem;
+  }
+  .header .input, .header .searchBtn {
+    padding: 0.7em;
+    font-size: 1rem;
+  }
+  .header .input {
+    max-width: 300px;
+  }
+  .header .searchBtn {
+    max-width: 250px;
+  }
+}
+@media (min-width: 992px) {
+  .header {
+    background-image: url("../../Asset/headerDesktop.jpg");
+  }
+  .header h1 {
+    font-size: 2rem;
+    margin: 2em;
+  }
+  .header .input, .header .searchBtn {
+    text-align: center;
+  }
+  .header .input {
+    width: 35%;
+    max-width: 450px;
+    background-color: #f5f5f5;
+    color: #101010;
+  }
+  .header .searchBtn {
+    width: 25%;
+    max-width: 350px;
+  }
+}/*# sourceMappingURL=Header.module.css.map */

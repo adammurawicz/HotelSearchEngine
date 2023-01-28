@@ -1,0 +1,145 @@
+@use '../../../Colors.scss' as c;
+
+.hotel {
+    margin: 1em auto;
+    width: 80%;
+    border: 1px solid c.$myBlack;
+    border-radius: 10px;
+    overflow: hidden;
+    
+    .imgWrapper {
+        overflow: hidden;
+        width: 100%;
+        height: 200px;
+        
+        img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .infoWrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+
+        .mainWrapper {
+            
+            
+            .name {
+                font-size: 0.85rem;
+                font-weight: bold;
+            }
+            
+            .city {
+                background-color: c.$third;
+                text-align: center;
+                padding: 0.2em 0;
+                font-size: 0.75rem;
+                font-weight: bold;
+            }
+        }
+
+        .gradeWrapper {
+            .grade {
+                span {
+                    font-weight: bold;
+                    color: c.$fifth;
+                }
+            }
+
+            .showBtn {
+                background-color: c.$first;
+                border: none;
+                padding: 0.5em 1.2em;
+                border-radius: 10px;
+                color: c.$myWhite;
+                transition: background-color .3s;
+                
+                &:hover {
+                    background-color: c.$second;    
+                }
+
+            }
+        }
+
+    }
+
+    .contentWrapper {
+        .content {
+            text-align: justify;
+            padding: .5em;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .hotel {
+        margin: 2em auto;
+        max-width: 1000px;
+        display: flex;
+        flex-wrap: wrap;
+        
+        .imgWrapper {
+            overflow: hidden;
+            width: 60%;
+            height: 300px;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+    
+        .infoWrapper {
+            width: 40%;
+            flex-direction: column;
+    
+            .mainWrapper {
+                
+                
+                .name {
+                    font-size: 1rem;
+                }
+                
+                .city {
+                    padding: 0.4em 0;
+                    font-size: 0.85rem;
+                }
+            }
+    
+            .gradeWrapper {
+                .grade {
+
+                    font-size: 1.2rem;
+
+                    span {
+                        font-weight: bold;
+                        color: c.$fifth;
+                    }
+                }
+    
+                .showBtn {
+                    padding: 0.8em 2.2em;
+                    border-radius: 10px;
+                    font-size: .85rem;
+                    color: c.$myWhite;
+                    transition: background-color .3s;
+                    
+                    &:hover {
+                        background-color: c.$second;    
+                    }
+                }
+            }
+        }
+
+        
+    .contentWrapper {
+        .content {
+            text-align: center;
+            padding: .8em;
+            font-size: 1.1rem;
+        }
+    }
+
+    }
+}

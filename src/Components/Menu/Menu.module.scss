@@ -1,0 +1,21 @@
+@use '../../Colors.scss' as c;
+
+.menu {
+    display: flex;
+    justify-content: center;
+    padding: .5em;
+    margin: 0;
+    background-color: c.$fifth;
+    
+    a {
+        color: c.$myWhite;
+        text-decoration: none;
+        transition: text-decoration .3s;
+        font-size: 1.2em;
+        
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    
+}
