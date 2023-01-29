@@ -1,13 +1,17 @@
 import styles from './Header.module.scss'
 import React, { useState } from 'react';
+import PropTypes from 'prop-types'
 
+const propTypes = {
+    onSearch: PropTypes.func.isRequired
+}
 
-function Header() {
+function Header(props) {
 
     const [term, setTerm] = useState('')
 
     const search = () => {
-        console.log('search', term);
+       props.onSearch(term)
     }
 
     return (
@@ -31,5 +35,7 @@ function Header() {
         </div>
     )
 }
+
+Header.propTypes = propTypes
 
 export default Header

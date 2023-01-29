@@ -1,4 +1,14 @@
-import styles from './Hotel.module.scss'
+import PropTypes from 'prop-types';
+import styles from './Hotel.module.scss';
+
+const propTypes = {
+    name: PropTypes.string.isRequired,
+    city: PropTypes.string.isRequired,
+    rating: PropTypes.number.isRequired,
+    description: PropTypes.string.isRequired,
+}
+
+export default Hotel
 
 function Hotel (props) {
     return(
@@ -28,4 +38,4 @@ function Hotel (props) {
     )
 }
 
-export default Hotel
+Hotel.propTypes = propTypes
